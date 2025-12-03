@@ -1,0 +1,61 @@
+.login-container {
+    width: 250px;
+    height: 250px;
+    margin: 100px auto;
+    padding: 120px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    justify-self: center;
+    background-color: #96bbe9;
+    }
+
+.login-container input {
+    font-size: 25px;
+    justify-self: center;
+    margin-top: 5%;
+    }
+
+
+.login-container button {
+    font-size: 20px;
+    justify-self: center;
+    margin-top: 10%;
+    }
+
+.options-container {
+    font-size: 15px;
+    justify-self: center;
+    margin-top: 30%;
+}
+
+.return-container {
+    font-size: 30px;
+}
+
+.create-new-user-container {
+    width: 250px;
+    height: 250px;
+    margin: 100px auto;
+    padding: 120px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    justify-self: center;
+    background-color: #96bbe9;
+    }
+
+.create-new-user-container input {
+    font-size: 25px;
+    justify-self: center;
+    margin-top: 5%;
+    }
+
+.create-new-user-container button {
+    font-size: 20px;
+    justify-self: center;
+    margin-top: 10%;
+    }
+
+.create-new-user-container a {
+    text-decoration: none;
+    
+}

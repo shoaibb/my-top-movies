@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/static/style/style.css">
+</head>
+<body>
+
+   <div class="create-new-user-container">
+        <div class="input-container">
+            <form action="/my-top-movies/create-new-user" method="post">
+                <label>
+                    <input type="text" name="username" placeholder="Enter a username" required>
+                </label>
+                <label>
+                    <input type="password" name="password" placeholder="Enter a password" required>
+                </label>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+
+        <div class="return-container">
+            <a href="/my-top-movies/create-new-user-page">⬅️</a>
+        </div>
+
+        <div class="login-message-container">
+
+        </div>
+    </div>
+
+
+</body>
+</html>
