@@ -2,3 +2,14 @@
 /.env
 __pycache__/
 *.pyc
+/controllers/__pycache__/
+/models/__pycache__/
+/views/__pycache__/
+/database/__pycache__/
+/tests/__pycache__/
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/services/__pycache__/
