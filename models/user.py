@@ -5,3 +5,5 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     hashed_password = db.Column(db.String(120), nullable=False)
+
+    movies = db.relationship('UserMovies', backref='user', lazy=True)

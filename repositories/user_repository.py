@@ -19,15 +19,15 @@ class UserRepository:
 
     @classmethod
     def get_user_by_username(cls, username: str) -> User:
-        return User.query.get(username)
+        return User.query.filter_by(username=username).first()
 
 
     #update
 
     @classmethod
-    def update_user_password(cls, user_id: int, new_hashed_password: str) -> User:
-        user = User.query.get(user_id)
-        user.hashed_password = new_hashed_password
+    def update_user(cls, user_id: int, updated_user: User) -> User:
+        old_user = User.query.get(updated_user.id)
+        old_user = updated_user
         db.session.commit()
 
     #delete

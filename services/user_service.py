@@ -1,31 +1,25 @@
-from repositories.user_repository import UserRepository
+from models.user import User
+from db import db
 
 class UserService:
+    def get_user_by_username(self, username):
+        return User.query.filter_by(username=username).first()
     
-    def __init__(self):
-        self.user_repository = UserRepository()
+    def get_user_by_id(self, user_id):
+        return User.query.get(user_id)
+    
+    def create_user(self, username, password_hash):
+        user = User(username=username, password=password_hash)
+        db.session.add(user)
+        db.session.commit()
+        return user
+    
+    def check_if_username_exists(self, username):
+        return User.query.filter_by(username=username).first() is not None
 
-
-    #CRUD reference methods
     def create_new_user(self, user):
-        self.user_repository.create_user(user.username, user.hashed_password)
+        db.session.add(user)
+        db.session.commit()
+        return user
     
-    def get_user_by_id(self, user_id: int):
-        return self.user_repository.get_user_by_id(user_id)
-    
-    def get_user_by_username(self, username: str):
-        return self.user_repository.get_user_by_username(username)
-    
-    def update_user(self, user):
-        self.user_repository.update_user(user)
-
-    def delete_user(self, user_id: int):
-        self.user_repository.delete_user(user_id)
-
-
-    #Business logic
-
-    def check_if_username_exists(self, entered_username: str) -> bool:
-        user = self.user_repository.get_user_by_username(entered_username)
-        return user is not None
-    
+user_service = UserService()

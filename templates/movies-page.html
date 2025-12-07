@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="/static/style/style.css">
+</head>
+<body>
+
+<div class="header-section">
+
+    <form action="/my-top-movies/create-new-movie" method="get">
+        <button class="create-new-movie-button" type="submit">CREATE NEW MOVIE</button>
+    </form>
+    <form action="/logout" method="get">
+        <button class="logout-button" type="submit">LOGOUT</button>
+    </form>
+
+</div>
+
+
+
+<h1>Your Movies</h1>
+<hr>
+<div class="movie-grid">
+{% if movies and movies|length > 0 %}
+
+    {% for entry in movies %}
+        <div class="movie-box">
+            <p>{{ entry.movie.title}}</p>
+            <p>Ranking: {{ entry.movie.ranking }}</p>
+            <form action="/my-top-movies/delete-movie" method="post">
+                <input type="hidden" name="movie_id" value="{{ entry.movie.id }}">
+                <button class="delete-movie-button" type="submit">DELETE MOVIE</button>
+            </form>
+        </div>
+    {% endfor %}
+
+{% else %}
+
+    <p>You have no movies yet.  </p>
+
+{% endif %}
+</div>
+
+</body>
+</html>
