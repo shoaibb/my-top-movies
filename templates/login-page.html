@@ -22,13 +22,19 @@
         </div>
 
         <div class="options-container">
-            <a href="/my-top-movies/create-new-user-page">CREATE ACCOUNT</a>
+            <a href="/my-top-movies/create-new-user">CREATE ACCOUNT</a>
             <br>
             <a href="/forgot-password">FORGOT PASSWORD</a>
         </div>
 
         <div class="login-message-container">
-            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <p class="error">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
         </div>
     </div>
 
