@@ -142,3 +142,6 @@ all its dependencies locked and can be run by the user automatically instead of 
 
 ## Errors, debugging or exceptions encountered
 
+- I was unable to use a config.py as the instructer used, so to overcome this I used a .env file instead to store credentials.
+- It was tricky for the css to work with (since I have no experience in UI dev) & often some commands did not work properly. But during the course I learned how to manage these.
+- During the lecture, instructor had to re-run the code after major changes to work. However, using VSCode, I did not have to re-run the code after changes.
