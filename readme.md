@@ -10,7 +10,7 @@ A Flask-based web application that allows users to create accounts, log in secur
 - **Session Management**: Secure session handling for user state
 - **Responsive UI**: Clean, gradient-styled interface with modern CSS
 
-## Technologies & Concepts
+## Concepts
 
 During this project, I was able to demonstrate several key Python and web development concepts:
 
@@ -119,4 +119,26 @@ During this project, I was able to demonstrate several key Python and web develo
 - Database tables are created automatically on first run via `db.create_all()`
 - Sessions are managed server-side with Flask's session middleware
 - All passwords are hashed using bcrypt before storage
+
+## What I learned? 
+
+- I was able to practically demonstrate key concepts used in building a Flask app.
+- Object oriented programming concepts using a layered architecture is also a good learning.
+- Securing a web app through sessions and encryption was learnt and implemented practically.
+- I was impressed how simple css stylin (without extensive scripts) can enhance the UI of web pages.
+
+## Future improvements
+
+- Since the web app is very simlpe (i.e. handling only movies by a user), I wonder if we could have used sqlite as db choice.
+Then it would not require running any db server but instead interact with a local db file.
+- We did not test the app for mutiple users. Will be nice to test it out to see load balancing as in large organizations an 
+app is often accessed by multiple users simalteanously.
+- Storing more data for a movie can also be an improvment, such as IMDB link or any image for the title. Currently, we store
+textual information only.
+- Adding more details for a user (e.g., as a user profile) can be a future improvement as well.
+- Containerizing the whole web app with a SQL db can also be considered as a future improvement. This will allow the app with
+all its dependencies locked and can be run by the user automatically instead of manual settings.
+
+
+## Errors, debugging or exceptions encountered
 
